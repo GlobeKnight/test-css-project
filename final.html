@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Full-Page Photo Slider with Testimonials and Contact</title>
+
+  
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="slider.css">
+  <link rel="stylesheet" href="testimonials.css">
+  <link rel="stylesheet" href="contact.css">
+
+  <style>
+    body {
+      margin-left: 0;
+    }
+    .testimonial img {
+      width: 40px;
+      height: 40px;
+    }
+    .testimonial {
+      display: flex;
+      text-align: left;
+      max-width: 250px;
+    }
+    .testimonial-slide {
+      display: none;
+    }
+    .testimonial-slide.active {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Side Nav -->
+  <div id="mySidenav" class="sidenav bg-light border-right" style="width: 0; height: 100%; position: fixed; top: 0; left: 0; overflow-x: hidden; transition: 0.3s; padding-top: 60px;">
+    <a href="javascript:void(0)" class="d-block py-2 px-3" onclick="toggleNav()">open</a>
+    <a href="page1.html" class="d-block py-2 px-3">Page 1</a>
+    <a href="page2.html" class="d-block py-2 px-3">Page 2</a>
+    <a href="page3.html" class="d-block py-2 px-3">Page 3</a>
+    <a href="#contact" class="d-block py-2 px-3">Contact Us</a>
+  </div>
+  <!-- Bootstrap Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container-fluid">
+
+      <!-- Menu button (side nav toggle) -->
+      <button class="btn btn-primary mr-2 d-lg-none" type="button" onclick="toggleNav()">☰</button>
+
+      <!-- Logo and title -->
+      <a class="navbar-brand d-flex align-items-center" href="final.html">
+        <img src="../Pics/logo.jpg" alt="Logo" style="height:50px;">
+        <h2 class="ml-2 mb-0">Slider</h2>
+      </a>
+
+      
+
+      <!-- Navbar links -->
+      <div class="collapse navbar-collapse justify-content-end" id="navbarLinks">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="page1.html">Page 1</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="page2.html">Page 2</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="page3.html">Page 3</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- Photo Slider -->
+  <div class="slider-container container-fluid p-0">
+    <div class="slides">
+      <div class="slide"><img src="../Pics/Slider 1.jpg" alt="Photo 1" style="object-fit:cover;"></div>
+      <div class="slide"><img src="../Pics/Slider 2.jpg" alt="Photo 2" style="object-fit:cover;"></div>
+      <div class="slide"><img src="../Pics/Slider 3.jpg" alt="Photo 3" style="object-fit:cover;"></div>
+    </div>
+  </div>
+
+  <script src="slider.js"></script>
+
+  <!-- Testimonials -->
+  <div class="testimonial-section container mt-5">    
+    <div class="testimonial-container">
+      <h2 class="text-center">Testimonials</h2>
+
+      <!-- Slide 1 -->
+      <div class="testimonial-slide active">
+        <div class="container">
+          <div class="row">
+            <!-- 9 Testimonials (Slide 1) -->
+            <div class="col-md-4 mb-3">
+              <div class="testimonial d-flex">
+                <img src="../Pics/User 1.jpg" alt="User 1" class="img-fluid mr-2">
+                <div class="testimonial-text">
+                  <span class="name">John Doe</span><br>
+                  <span class="designation">Web Developer</span><br>
+                  <span>"Amazing experience"</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="testimonial d-flex">
+                <img src="../Pics/User 1.jpg" alt="User 2" class="img-fluid mr-2">
+                <div class="testimonial-text">
+                  <span class="name">Jane Smith</span><br>
+                  <span class="designation">UI/UX Designer</span><br>
+                  <span>"Great design"</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="testimonial d-flex">
+                <img src="../Pics/User 1.jpg" alt="User 3" class="img-fluid mr-2">
+                <div class="testimonial-text">
+                  <span class="name">Rahul Verma</span><br>
+                  <span class="designation">Frontend Intern</span><br>
+                  <span>"Loved the UI"</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="testimonial d-flex">
+                <img src="../Pics/User 1.jpg" alt="User 4" class="img-fluid mr-2">
+                <div class="testimonial-text">
+                  <span class="name">Priya Nair</span><br>
+                  <span class="designation">Project Manager</span><br>
+                  <span>"Fast and clean"</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="testimonial d-flex">
+                <img src="../Pics/User 1.jpg" alt="User 5" class="img-fluid mr-2">
+                <div class="testimonial-text">
+                  <span class="name">Ali Khan</span><br>
+                  <span class="designation">Full Stack Dev</span><br>
+                  <span>"Highly recommended"</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="testimonial d-flex">
+                <img src="../Pics/User 1.jpg" alt="User 6" class="img-fluid mr-2">
+                <div class="testimonial-text">
+                  <span class="name">Sara Lee</span><br>
+                  <span class="designation">Designer</span><br>
+                  <span>"Professional work"</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="testimonial d-flex">
+                <img src="../Pics/User 1.jpg" alt="User 7" class="img-fluid mr-2">
+                <div class="testimonial-text">
+                  <span class="name">David Kim</span><br>
+                  <span class="designation">Backend Dev</span><br>
+                  <span>"Responsive layout"</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="testimonial d-flex">
+                <img src="../Pics/User 1.jpg" alt="User 8" class="img-fluid mr-2">
+                <div class="testimonial-text">
+                  <span class="name">Emily Wong</span><br>
+                  <span class="designation">Support Lead</span><br>
+                  <span>"Great support"</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="testimonial d-flex">
+                <img src="../Pics/User 1.jpg" alt="User 9" class="img-fluid mr-2">
+                <div class="testimonial-text">
+                  <span class="name">Michael Chen</span><br>
+                  <span class="designation">CTO</span><br>
+                  <span>"Will recommend to all"</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="testimonial-slide">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <div class="testimonial d-flex">
+                <img src="../Pics/User 2.jpg" alt="User 10" class="img-fluid mr-2">
+                <div class="testimonial-text">
+                  <span class="name">Anna Ivanova</span><br>
+                  <span class="designation">QA Engineer</span><br>
+                  <span>"Tested thoroughly"</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="testimonial d-flex">
+                <img src="../Pics/User 2.jpg" alt="User 11" class="img-fluid mr-2">
+                <div class="testimonial-text">
+                  <span class="name">Carlos Ruiz</span><br>
+                  <span class="designation">DevOps Specialist</span><br>
+                  <span>"Smooth deployment"</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="testimonial d-flex">
+                <img src="../Pics/User 2.jpg" alt="User 12" class="img-fluid mr-2">
+                <div class="testimonial-text">
+                  <span class="name">Linda Park</span><br>
+                  <span class="designation">Marketing Lead</span><br>
+                  <span>"Boosted our brand"</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="testimonial d-flex">
+                <img src="../Pics/User 2.jpg" alt="User 13" class="img-fluid mr-2">
+                <div class="testimonial-text">
+                  <span class="name">Tom Müller</span><br>
+                  <span class="designation">Product Owner</span><br>
+                  <span>"Met all requirements"</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="testimonial d-flex">
+                <img src="../Pics/User 2.jpg" alt="User 14" class="img-fluid mr-2">
+                <div class="testimonial-text">
+                  <span class="name">Fatima Zahra</span><br>
+                  <span class="designation">HR Manager</span><br>
+                  <span>"Team loved it"</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="testimonial d-flex">
+                <img src="../Pics/User 2.jpg" alt="User 15" class="img-fluid mr-2">
+                <div class="testimonial-text">
+                  <span class="name">Lucas Rossi</span><br>
+                  <span class="designation">Mobile Dev</span><br>
+                  <span>"Works on all devices"</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="testimonial d-flex">
+                <img src="../Pics/User 2.jpg" alt="User 16" class="img-fluid mr-2">
+                <div class="testimonial-text">
+                  <span class="name">Isabella Silva</span><br>
+                  <span class="designation">Business Analyst</span><br>
+                  <span>"Clear reporting"</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="testimonial d-flex">
+                <img src="../Pics/User 2.jpg" alt="User 17" class="img-fluid mr-2">
+                <div class="testimonial-text">
+                  <span class="name">Omar Farouk</span><br>
+                  <span class="designation">Security Expert</span><br>
+                  <span>"Secure and safe"</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="testimonial d-flex">
+                <img src="../Pics/User 2.jpg" alt="User 18" class="img-fluid mr-2">
+                <div class="testimonial-text">
+                  <span class="name">Sophie Dubois</span><br>
+                  <span class="designation">Content Writer</span><br>
+                  <span>"Clear documentation"</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="testimonial-slide">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 mb-3">
+              <div class="testimonial d-flex">
+                <img src="../Pics/User 3.jpg" alt="User 19" class="img-fluid mr-2">
+                <div class="testimonial-text">
+                  <span class="name">Peter Novak</span><br>
+                  <span class="designation">Cloud Architect</span><br>
+                  <span>"Cloud-ready solution"</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="testimonial d-flex">
+                <img src="../Pics/User 3.jpg" alt="User 20" class="img-fluid mr-2">
+                <div class="testimonial-text">
+                  <span class="name">Mei Lin</span><br>
+                  <span class="designation">AI Specialist</span><br>
+                  <span>"Smart features"</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="testimonial d-flex">
+                <img src="../Pics/User 3.jpg" alt="User 21" class="img-fluid mr-2">
+                <div class="testimonial-text">
+                  <span class="name">Samir Patel</span><br>
+                  <span class="designation">Scrum Master</span><br>
+                  <span>"Agile process"</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="testimonial d-flex">
+                <img src="../Pics/User 3.jpg" alt="User 22" class="img-fluid mr-2">
+                <div class="testimonial-text">
+                  <span class="name">Julia Rossi</span><br>
+                  <span class="designation">SEO Expert</span><br>
+                  <span>"Ranked us higher"</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="testimonial d-flex">
+                <img src="../Pics/User 3.jpg" alt="User 23" class="img-fluid mr-2">
+                <div class="testimonial-text">
+                  <span class="name">Ahmed Hassan</span><br>
+                  <span class="designation">Network Admin</span><br>
+                  <span>"No downtime"</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="testimonial d-flex">
+                <img src="../Pics/User 3.jpg" alt="User 24" class="img-fluid mr-2">
+                <div class="testimonial-text">
+                  <span class="name">Maria Lopez</span><br>
+                  <span class="designation">Sales Lead</span><br>
+                  <span>"Sales improved"</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="testimonial d-flex">
+                <img src="../Pics/User 3.jpg" alt="User 25" class="img-fluid mr-2">
+                <div class="testimonial-text">
+                  <span class="name">Viktor Petrov</span><br>
+                  <span class="designation">Data Scientist</span><br>
+                  <span>"Great analytics"</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="testimonial d-flex">
+                <img src="../Pics/User 3.jpg" alt="User 26" class="img-fluid mr-2">
+                <div class="testimonial-text">
+                  <span class="name">Nina Müller</span><br>
+                  <span class="designation">Legal Advisor</span><br>
+                  <span>"Compliant & safe"</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-3">
+              <div class="testimonial d-flex">
+                <img src="../Pics/User 3.jpg" alt="User 27" class="img-fluid mr-2">
+                <div class="testimonial-text">
+                  <span class="name">Rajesh Kumar</span><br>
+                  <span class="designation">Operations Head</span><br>
+                  <span>"Streamlined ops"</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Buttons -->
+      <div class="testimonialsliderbuttons text-center mt-3">
+        <button class="btn btn-secondary mb-2" onclick="changeTestimonial(-1)">Prev</button>
+        <button class="btn btn-primary" onclick="changeTestimonial(1)">Next</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Contact Us -->
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6">
+        <h2>Contact Us</h2>
+        <p>Email: <a href="mailto:support@example.com">support@example.com</a></p>
+        <p>Phone: +91 9441287775</p>
+        <p>Address: Hyderabad, India</p>
+      </div>
+
+      <div class="col-md-6">
+        <h2>Form</h2>
+        <form>
+          <div class="form-group">
+            <label for="fname">Name:</label>
+            <input type="text" id="fname" name="fname" class="form-control">
+          </div>
+
+          <div class="form-group">
+            <label for="Email">Email id:</label>
+            <input type="text" id="Email" name="Email" class="form-control">
+          </div>
+
+          <div class="form-group">
+            <label for="comment">Comments:</label>
+            <textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+          </div>
+
+          <button type="button" class="btn btn-primary" onclick="saveToFile()">Submit</button>
+        </form> 
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+  function saveToFile() {
+    const name = document.getElementById("fname").value;
+    const email = document.getElementById("Email").value;
+    const comments = document.getElementById("comment").value;
+
+    const content = `Name: ${name}\nEmail: ${email}\nComments: ${comments}`;
+
+    const blob = new Blob([content], { type: "text/plain" });
+    const url = URL.createObjectURL(blob);
+
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "formdata.txt";
+    document.body.appendChild(a);
+    a.click();
+  }
+  </script>
+
+</script>
+<script>
+function toggleNav() {
+  var nav = document.getElementById("mySidenav");
+  if (nav.style.width === "200px") {
+    nav.style.width = "0";
+    document.body.style.marginLeft = "0";
+  } else {
+    nav.style.width = "200px";
+    document.body.style.marginLeft = "200px";
+  }
+}
+</script>
+  <script src="test5.js"></script>
+</body>
+</html>
+

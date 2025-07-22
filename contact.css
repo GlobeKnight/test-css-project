@@ -1,0 +1,23 @@
+.contact-us {
+            padding: 40px 20px;
+            text-align: center;
+            background: #fff;
+        }
+
+        .contact-us h2 {
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+
+        .contact-us p {
+            margin: 10px 0;
+        }
+
+        .contact-us a {
+            color: rgb(223, 113, 113);
+            text-decoration: none;
+        }
+
+        .contact-us a:hover {
+            text-decoration: underline;
+        }
